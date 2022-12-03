@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Inventario</title>
+    <link rel="StyleSheet" href="static/css/crud.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/js/crud.js">
+    
+
+    </script>
+</head>
+<body>
+    <div id="contenedor_crud">
+        <div class="filas">
+            <center><h2>Sistema Inventario</h2></center>
+        </div>
+        <div class="filas">
+            <form id="fcrud" name="fcrud" method="" action="">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre del producto" class="campos_crud" />
+                <br>
+                <input type="tel" name="" id="codigo" placeholder="Ingrese el código del producto" class="campos_crud" />
+                <br>
+                <input type="text" name="cantidad" id="cantidad" placeholder="Ingrese La cantidad del producto" class="campos_crud" />
+                <br>
+                <input type="text" name="estado" id="estado" placeholder="Ingrese el estado del producto" class="campos_crud" />
+                <br>
+                <input type="text" name="ubicacion" id="ubicacion" placeholder="Ingrese la ubicación del producto" class="campos_crud" />
+                <br>
+                 <center><h3>Ingrese las diferentes observaciones</h3></center>
+                <textarea name="obs" id="obs1" class="obs_crud">
+
+                </textarea>
+                <hr>
+                <div id='listado'>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="Guardar" class="boton_crud" onclick="adicionar_elemento()" />
+                        </td>
+                        <td>
+                            <input type="button" value="Editar" class="boton_crud" onclick="actualizar_elemento()"  />
+                        </td>
+                        <td>
+                            <input type="button" value="Eliminar" class="boton_crud" onclick="eliminar_elemento()" />
+                        </td>
+                        <td>
+                            <input type="button" value="Listar" class="boton_crud" onclick="listar_elementos()" />
+                        </td>
+                        <td>
+                            <input type="button" value="Salir" class="boton_crud" />
+                        </td>
+                    </tr>
+                </table>
+                 </div> 
+                <hr>
+                <div id="listado_actual">
+                <table>
+                    <tr>
+                        <td>Nombre del producto</td><td>Cantidad del producto</td><td>Estado del producto</td><td>Ubicación del producto</td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td>
+                    </tr>
+                </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
